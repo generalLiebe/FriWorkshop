@@ -4,14 +4,14 @@
 
 | 課題 | 内容 | 状態 |
 |---|---|---|
-| 00 | Gitのインストールと初期設定 | ⏳ |
+| 00 | Gitのインストールと初期設定 | ✅ |
 | 01 | リポジトリの初期化と最初のコミット | ✅ |
-| 02 | GitHubアカウント・2FA・SSHキー登録 | ⏳ |
-| 03 | ローカルとGitHubリポジトリの連携 | ⏳ |
-| 04 | ファイルの変更とpush/pull | ⏳ |
+| 02 | GitHubアカウント・2FA・SSHキー登録 | ✅ |
+| 03 | ローカルとGitHubリポジトリの連携 | ✅ |
+| 04 | ファイルの変更とpush/pull | ✅ |
 | 05 | .gitignoreの作成 | ✅ |
 | 06 | ブランチの作成と切り替え | ✅ |
-| 07 | Pull Requestの作成 | ⏳ |
+| 07 | Pull Requestの作成 | ✅ |
 | 08 | コミット履歴と差分の確認 | ✅ |
 | 09 | コンフリクトの発生と解消 | ✅ |
 
@@ -19,7 +19,24 @@
 
 ## 00. Gitのインストールと初期設定
 
-> ⏳ 未完了：Mac上での実行・GitHub上での操作後に追記します。
+自分のMac（macOS）にはGitがインストール済みであった．`git config --global` で名前・メールアドレス・既定ブランチ名を設定した．`user.email` はGitHubの公開用アドレス（noreply）になっている．
+
+```
+$ git config --global user.name "generalLiebe"
+$ git config --global user.email "130543432+generalLiebe@users.noreply.github.com"
+$ git config --global init.defaultBranch main
+$ git --version
+git version 2.39.5 (Apple Git-154)
+$ git config --global --list
+user.name=generalLiebe
+user.email=130543432+generalLiebe@users.noreply.github.com
+core.editor=nano
+credential.https://github.com.helper=
+credential.https://github.com.helper=!/opt/homebrew/bin/gh auth git-credential
+credential.https://gist.github.com.helper=
+credential.https://gist.github.com.helper=!/opt/homebrew/bin/gh auth git-credential
+init.defaultbranch=main
+```
 
 ---
 
@@ -50,19 +67,67 @@ $ git rev-parse HEAD
 
 ## 02. GitHubアカウント・2段階認証・SSHキー登録
 
-> ⏳ 未完了：Mac上での実行・GitHub上での操作後に追記します。
+- GitHubアカウント `generalLiebe` で2段階認証（2FA）を有効化．
+- 既存のEd25519鍵（`~/.ssh/id_ed25519`）の公開鍵（`id_ed25519.pub`）をGitHubの「Settings → SSH and GPG keys」に登録．秘密鍵の中身は公開していない．
+
+![SSH鍵の登録画面](evidence/02_ssh_keys.png)
+
+```
+$ ssh -T git@github.com
+Enter passphrase for key '/Users/sousuimoribe/.ssh/id_ed25519': 
+Hi generalLiebe! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
 ---
 
 ## 03. ローカルリポジトリとGitHubリポジトリの連携
 
-> ⏳ 未完了：Mac上での実行・GitHub上での操作後に追記します。
+GitHubに空のリポジトリ `generalLiebe/FriWorkshop` を作成し，SSHのURLでリモート `origin` として登録した．
+
+```
+$ git remote add origin git@github.com:generalLiebe/FriWorkshop.git
+$ git remote -v
+origin	git@github.com:generalLiebe/FriWorkshop.git (fetch)
+origin	git@github.com:generalLiebe/FriWorkshop.git (push)
+$ git push -u origin main develop feature/english
+```
 
 ---
 
 ## 04. ファイルの変更とpush/pull
 
-> ⏳ 未完了：Mac上での実行・GitHub上での操作後に追記します。
+1. ローカルで README.md などを編集し，`git add` → `git commit` → `git push` でGitHubに反映した（課題01〜09のコミット群）．
+2. GitHub上でREADME.mdを直接編集し，末尾に1行を追加してコミットした（`dae865e Update README with note on GitHub editing`）．
+3. ローカルで `git pull` してその変更を取り込んだ．
+
+ローカルの `main` とリモートの `origin/main` の最新コミットが同じ `dae865e` であり，`git status` も `up to date with 'origin/main'` となっているため，両者が一致していることがわかる．
+
+```
+$ git pull
+$ git log --oneline -5
+dae865e Update README with note on GitHub editing
+d55f350 docs: 課題01・05・06・08・09の証跡をREADMEにまとめる
+105ac95 merge: feature/englishを取り込み、日英併記でコンフリクトを解消
+43c128f feat: あいさつに「世界」を追加
+732fea6 feat: あいさつを英語にする
+
+$ git log --oneline -5 origin/main
+dae865e Update README with note on GitHub editing
+d55f350 docs: 課題01・05・06・08・09の証跡をREADMEにまとめる
+105ac95 merge: feature/englishを取り込み、日英併記でコンフリクトを解消
+43c128f feat: あいさつに「世界」を追加
+732fea6 feat: あいさつを英語にする
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	evidence/
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
 
 ---
 
@@ -160,7 +225,31 @@ $ git log --oneline --all --graph
 
 ## 07. Pull Request（PR）の作成
 
-> ⏳ 未完了：Mac上での実行・GitHub上での操作後に追記します。
+`develop` ブランチ（課題06で `practice/profile.md` を追加したもの）から `main` へのPull Request [#1](https://github.com/generalLiebe/FriWorkshop/pull/1) を作成し，マージした．
+
+**PRの説明欄**
+
+- **何を変更したか：** 自己紹介ページ `practice/profile.md` を追加した（GitHubユーザー名とワークショップの目標）．
+- **なぜ変更したか：** 作業用ブランチ（`develop`）で変更し，PRを通して `main` に取り込む流れを練習するため．
+
+**PR作成画面**
+
+![PR作成画面](evidence/07_pr.png)
+
+**マージ完了画面**
+
+![マージ完了画面](evidence/07_merged.png)
+
+マージ後，ローカルで `git pull` して取り込んだ．
+
+```
+$ git log --oneline --graph -4
+*   2672124 Merge pull request #1 from generalLiebe/develop
+|\
+| * feb1f50 feat: 自己紹介ページ(practice/profile.md)を追加
+* | dae865e Update README with note on GitHub editing
+* | d55f350 docs: 課題01・05・06・08・09の証跡をREADMEにまとめる
+```
 
 ---
 

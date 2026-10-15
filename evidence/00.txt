@@ -1,0 +1,9 @@
+git version 2.39.5 (Apple Git-154)
+user.name=generalLiebe
+user.email=130543432+generalLiebe@users.noreply.github.com
+core.editor=nano
+credential.https://github.com.helper=
+credential.https://github.com.helper=!/opt/homebrew/bin/gh auth git-credential
+credential.https://gist.github.com.helper=
+credential.https://gist.github.com.helper=!/opt/homebrew/bin/gh auth git-credential
+init.defaultbranch=main

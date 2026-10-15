@@ -1,0 +1,23 @@
+$ git log --oneline -5
+dae865e Update README with note on GitHub editing
+d55f350 docs: 課題01・05・06・08・09の証跡をREADMEにまとめる
+105ac95 merge: feature/englishを取り込み、日英併記でコンフリクトを解消
+43c128f feat: あいさつに「世界」を追加
+732fea6 feat: あいさつを英語にする
+
+$ git log --oneline -5 origin/main
+dae865e Update README with note on GitHub editing
+d55f350 docs: 課題01・05・06・08・09の証跡をREADMEにまとめる
+105ac95 merge: feature/englishを取り込み、日英併記でコンフリクトを解消
+43c128f feat: あいさつに「世界」を追加
+732fea6 feat: あいさつを英語にする
+
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	evidence/
+
+nothing added to commit but untracked files present (use "git add" to track)

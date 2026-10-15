@@ -1,0 +1,3 @@
+$ ssh -T git@github.com
+Enter passphrase for key '/Users/sousuimoribe/.ssh/id_ed25519': 
+Hi generalLiebe! You've successfully authenticated, but GitHub does not provide shell access.
