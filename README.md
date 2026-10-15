@@ -307,3 +307,5 @@ $ git log --graph --oneline
 * ce6cf89 chore: .gitignoreを追加
 * 18a82f1 first commit: README.mdを追加
 ```
+
+> この行はGitHub上で直接編集しました（課題04）
