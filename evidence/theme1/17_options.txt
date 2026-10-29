@@ -1,0 +1,12 @@
+$ curl -s -i -X OPTIONS https://httpbin.org/get
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-methods: GET, POST, HEAD, PUT, DELETE, PATCH, QUERY, OPTIONS
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+access-control-max-age: 3600
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+date: Thu, 29 Oct 2026 16:57:00 GMT
+content-length: 0
+

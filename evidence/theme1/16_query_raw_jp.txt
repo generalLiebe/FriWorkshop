@@ -1,0 +1,5 @@
+$ curl -sS 'https://httpbin.org/get?name=山田 太郎'
+curl: (3) URL rejected: Malformed input to a URL function
+
+[exit/status] 000
+exit=3

@@ -1,0 +1,18 @@
+$ curl -s -v -o /dev/null https://example.com
+> GET / HTTP/2
+> Host: example.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+< HTTP/2 200 
+< date: Thu, 29 Oct 2026 16:57:46 GMT
+< content-type: text/html; charset=utf-8
+< server: cloudflare
+< last-modified: Sat, 24 Oct 2026 11:34:40 GMT
+< allow: GET, HEAD
+< accept-ranges: bytes
+< age: 3317
+< cf-cache-status: HIT
+< cf-ray: a523b8a4aba4c571-KIX
+< alt-svc: h3=":443"; ma=86400
+< 

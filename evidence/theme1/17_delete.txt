@@ -1,0 +1,25 @@
+$ curl -s -i -X DELETE https://httpbin.org/delete
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+content-length: 265
+content-type: application/json
+x-content-type-options: nosniff
+date: Thu, 29 Oct 2026 16:57:00 GMT
+
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "DELETE",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/delete",
+  "data": "",
+  "files": {},
+  "form": {},
+  "json": null
+}

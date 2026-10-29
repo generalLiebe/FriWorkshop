@@ -1,0 +1,13 @@
+$ curl -s -I https://example.com
+HTTP/2 200 
+date: Thu, 29 Oct 2026 16:56:52 GMT
+content-type: text/html; charset=utf-8
+server: cloudflare
+last-modified: Sat, 24 Oct 2026 11:34:40 GMT
+allow: GET, HEAD
+accept-ranges: bytes
+age: 3263
+cf-cache-status: HIT
+cf-ray: a523b750ed02dfa1-KIX
+alt-svc: h3=":443"; ma=86400
+

@@ -1,0 +1,10 @@
+$ curl -s -i https://httpbin.org/status/302
+HTTP/2 302 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+content-length: 0
+location: /redirect/1
+x-content-type-options: nosniff
+date: Thu, 29 Oct 2026 16:56:52 GMT
+

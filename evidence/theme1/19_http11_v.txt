@@ -1,0 +1,42 @@
+$ curl -s -v --http1.1 https://httpbin.org/get
+* Connected to httpbin.org (3.137.48.32) port 443
+* ALPN: curl offers http/1.1
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted http/1.1
+* Server certificate:
+*  subject: CN=httpbin.hbin.postmanlabs.com
+*  start date: Oct 28 18:55:57 2026 GMT
+*  expire date: Jan 26 18:55:56 2027 GMT
+*  subjectAltName: host "httpbin.org" matched cert's "httpbin.org"
+*  issuer: C=US; O=Let's Encrypt; CN=YE1
+*  SSL certificate verify ok.
+* using HTTP/1.x
+> GET /get HTTP/1.1
+> Host: httpbin.org
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/1.1 200 OK
+< access-control-allow-credentials: true
+< access-control-allow-origin: *
+< access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+< content-length: 200
+< content-type: application/json
+< x-content-type-options: nosniff
+< date: Thu, 29 Oct 2026 16:57:16 GMT
+< 
+* Connection #0 to host httpbin.org left intact
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get"
+}

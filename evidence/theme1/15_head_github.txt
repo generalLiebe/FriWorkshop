@@ -1,0 +1,9 @@
+$ curl -s -I https://github.com  (一部抜粋)
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+etag: W/"6df91c1271fb31fb98fb2dba5b2d16b5"
+cache-control: max-age=0, private, must-revalidate
+strict-transport-security: max-age=31536000; includeSubdomains; preload
+x-frame-options: deny
+x-content-type-options: nosniff
+server: github.com

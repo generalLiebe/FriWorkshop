@@ -1,0 +1,15 @@
+$ curl -s 'https://httpbin.org/get?name=foo&age=20'
+{
+  "args": {
+    "age": "20",
+    "name": "foo"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get?name=foo&age=20"
+}

@@ -1,0 +1,21 @@
+$ curl -s -i https://httpbin.org/get
+HTTP/2 200 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+content-length: 200
+content-type: application/json
+x-content-type-options: nosniff
+date: Thu, 29 Oct 2026 16:56:41 GMT
+
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get"
+}
