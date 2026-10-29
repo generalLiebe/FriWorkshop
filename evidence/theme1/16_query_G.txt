@@ -1,0 +1,15 @@
+$ curl -s -G https://httpbin.org/get --data-urlencode 'name=山田 太郎' --data-urlencode 'q=a&b'
+{
+  "args": {
+    "name": "山田 太郎",
+    "q": "a&b"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get?name=%e5%b1%b1%e7%94%b0+%e5%a4%aa%e9%83%8e&q=a%26b"
+}

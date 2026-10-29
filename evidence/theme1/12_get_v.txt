@@ -1,0 +1,68 @@
+$ curl -s -v https://httpbin.org/get
+* Host httpbin.org:443 was resolved.
+* IPv6: (none)
+* IPv4: 3.137.48.32, 16.58.42.220, 18.227.178.96
+*   Trying 3.137.48.32:443...
+* Connected to httpbin.org (3.137.48.32) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [316 bytes data]
+*  CAfile: /etc/ssl/cert.pem
+*  CApath: none
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [3487 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [80 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=httpbin.hbin.postmanlabs.com
+*  start date: Oct 28 18:55:57 2026 GMT
+*  expire date: Jan 26 18:55:56 2027 GMT
+*  subjectAltName: host "httpbin.org" matched cert's "httpbin.org"
+*  issuer: C=US; O=Let's Encrypt; CN=YE1
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://httpbin.org/get
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: httpbin.org]
+* [HTTP/2] [1] [:path: /get]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET /get HTTP/2
+> Host: httpbin.org
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< access-control-allow-credentials: true
+< access-control-allow-origin: *
+< access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+< content-length: 200
+< content-type: application/json
+< x-content-type-options: nosniff
+< date: Thu, 29 Oct 2026 16:56:42 GMT
+< 
+{ [200 bytes data]
+* Connection #0 to host httpbin.org left intact
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get"
+}

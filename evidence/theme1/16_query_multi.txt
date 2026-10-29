@@ -1,0 +1,17 @@
+$ curl -s 'https://httpbin.org/get?tag=a&tag=b'
+{
+  "args": {
+    "tag": [
+      "a",
+      "b"
+    ]
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get?tag=a&tag=b"
+}

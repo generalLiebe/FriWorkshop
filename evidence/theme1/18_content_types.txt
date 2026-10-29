@@ -1,0 +1,9 @@
+https://example.com                      text/html; charset=utf-8
+https://httpbin.org/json                 application/json
+https://httpbin.org/html                 text/html; charset=utf-8
+https://httpbin.org/xml                  application/xml
+https://httpbin.org/image/png            image/png
+https://httpbin.org/image/jpeg           image/jpeg
+https://httpbin.org/image/svg            image/svg+xml
+https://httpbin.org/robots.txt           text/plain
+https://www.google.com/favicon.ico       image/x-icon

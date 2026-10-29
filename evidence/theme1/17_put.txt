@@ -1,0 +1,20 @@
+$ curl -s -X PUT https://httpbin.org/put -H 'Content-Type: application/json' -d '{"name":"foo"}'
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Content-Length": "14",
+    "Content-Type": "application/json",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "PUT",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/put",
+  "data": "{\"name\":\"foo\"}",
+  "files": {},
+  "form": {},
+  "json": {
+    "name": "foo"
+  }
+}

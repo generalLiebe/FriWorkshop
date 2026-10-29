@@ -1,0 +1,12 @@
+$ curl -s https://httpbin.org/get
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get"
+}

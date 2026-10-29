@@ -1,0 +1,10 @@
+$ curl -s -i https://httpbin.org/status/404
+HTTP/2 404 
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: Retry-After, RateLimit, RateLimit-Policy
+content-length: 0
+content-type: text/html; charset=utf-8
+x-content-type-options: nosniff
+date: Thu, 29 Oct 2026 16:56:51 GMT
+

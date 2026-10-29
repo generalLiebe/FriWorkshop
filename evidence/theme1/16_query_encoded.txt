@@ -1,0 +1,15 @@
+$ curl -s 'https://httpbin.org/get?name=%E5%B1%B1%E7%94%B0%20%E5%A4%AA%E9%83%8E&q=a%26b'
+{
+  "args": {
+    "name": "山田 太郎",
+    "q": "a&b"
+  },
+  "headers": {
+    "Accept": "*/*",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "GET",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/get?name=%E5%B1%B1%E7%94%B0%20%E5%A4%AA%E9%83%8E&q=a%26b"
+}

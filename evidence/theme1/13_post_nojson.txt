@@ -1,0 +1,20 @@
+$ curl -s -X POST https://httpbin.org/post -d '{"name":"foo","age":20}'
+{
+  "args": {},
+  "headers": {
+    "Accept": "*/*",
+    "Content-Length": "23",
+    "Content-Type": "application/x-www-form-urlencoded",
+    "Host": "httpbin.org",
+    "User-Agent": "curl/8.7.1"
+  },
+  "method": "POST",
+  "origin": "xxx.xxx.xxx.xxx",
+  "url": "https://httpbin.org/post",
+  "data": "",
+  "files": {},
+  "form": {
+    "{\"name\":\"foo\",\"age\":20}": ""
+  },
+  "json": null
+}
