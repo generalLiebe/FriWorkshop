@@ -6,6 +6,7 @@
 |---|---|---|
 | 0 | GitとGitHubの基本・演習（課題00〜09） | このページ（下記） |
 | 1 | HTTPリクエストとレスポンスの基礎（課題10〜19） | [theme1/README.md](theme1/README.md) |
+| 2 | HTML・CSSの基本とWebページ公開（課題20〜29） | [theme2/README.md](theme2/README.md)（公開ページ：https://generalliebe.github.io/FriWorkshop/ ） |
 
 以下はテーマ0「GitとGitHubの基本・演習」の各課題の作業内容と証跡（コマンドと実行結果）です．
 
