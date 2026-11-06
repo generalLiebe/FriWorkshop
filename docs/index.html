@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>generalLiebeの自己紹介</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <p class="site-title">generalLiebe</p>
+    <nav aria-label="ページ内メニュー">
+      <ul class="nav-list">
+        <li><a href="#profile">自己紹介</a></li>
+        <li><a href="#timetable">時間割</a></li>
+        <li><a href="#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <main>
+      <section id="profile" class="card">
+        <h1>自己紹介</h1>
+        <div class="profile">
+          <img src="images/avatar.svg" alt="generalLiebeのアイコン（青い円に白い人物のシルエット）" width="120" height="120">
+          <p>
+            はじめまして，generalLiebeです．九州大学でWebサービス開発を学んでいます．
+            このページはFriWorkshopのテーマ2「HTML・CSSの基本とWebページ公開」の課題として作成しました．
+          </p>
+        </div>
+
+        <h2>好きなこと</h2>
+        <ul>
+          <li>プログラミング（最近はWebの仕組みを勉強中）</li>
+          <li>読書</li>
+          <li>散歩</li>
+        </ul>
+
+        <h2>リンク</h2>
+        <ul>
+          <li><a href="https://www.kyushu-u.ac.jp/" target="_blank" rel="noopener">九州大学のWebサイト</a></li>
+          <li><a href="https://github.com/generalLiebe/FriWorkshop" target="_blank" rel="noopener">このページのリポジトリ（GitHub）</a></li>
+        </ul>
+      </section>
+
+      <section id="timetable" class="card">
+        <h2>授業時間割（例）</h2>
+        <div class="table-wrap">
+          <table>
+            <caption>前期の時間割</caption>
+            <thead>
+              <tr>
+                <th scope="col">時限</th>
+                <th scope="col">月</th>
+                <th scope="col">火</th>
+                <th scope="col">水</th>
+                <th scope="col">木</th>
+                <th scope="col">金</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1限</th>
+                <td>線形代数</td>
+                <td>英語</td>
+                <td>—</td>
+                <td>プログラミング演習</td>
+                <td>統計学</td>
+              </tr>
+              <tr>
+                <th scope="row">2限</th>
+                <td>情報理論</td>
+                <td>—</td>
+                <td>データベース</td>
+                <td>プログラミング演習</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <th scope="row">3限</th>
+                <td>—</td>
+                <td>ネットワーク</td>
+                <td>ゼミ</td>
+                <td>—</td>
+                <td>Webサービス開発</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="contact" class="card">
+        <h2>お問い合わせ</h2>
+        <form class="contact-form" action="#" method="post">
+          <div class="field">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="example@example.com" required>
+          </div>
+          <div class="field">
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="button">送信する</button>
+        </form>
+      </section>
+    </main>
+
+    <aside class="sidebar card">
+      <h2>お知らせ</h2>
+      <ul>
+        <li>2026-11-06 テーマ2のページを公開しました</li>
+        <li>2026-10-30 テーマ1（HTTPの基礎）を完了しました</li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <p><small>&copy; 2026 generalLiebe</small></p>
+  </footer>
+</body>
+</html>
