@@ -574,3 +574,18 @@ URLは `https://ユーザー名.github.io/リポジトリ名/` の形式にな�
 ### 公開されたページ
 
 ![GitHub Pagesで公開されたページ](../evidence/theme2/29_github_pages.png)
+
+（上部の灰色の帯は，撮影したURLを示すために画像に書き足したもの）
+
+公開後に `curl` でも確認した．
+
+```
+$ curl -s -o /dev/null -w '%{http_code}\n' https://generalliebe.github.io/FriWorkshop/
+200
+```
+
+> 手順3の設定は，GitHub CLIで次のように行うこともできる．
+>
+> ```
+> $ gh api -X POST repos/generalLiebe/FriWorkshop/pages -f "source[branch]=main" -f "source[path]=/docs"
+> ```
